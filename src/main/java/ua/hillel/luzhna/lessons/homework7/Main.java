@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
        int counter = 0;
-        for (int i = 0; i < 155; i++) {
+        for (int i = 1; counter < 100; i++) {
             if (i / 10 == 4 || i / 10 == 9 || i / 10 % 10 == 4 || i % 10 == 4 || i% 10 == 9) {
                 continue;
             }

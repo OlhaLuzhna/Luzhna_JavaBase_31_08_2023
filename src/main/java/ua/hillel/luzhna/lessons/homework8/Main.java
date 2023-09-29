@@ -6,19 +6,25 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int number = (int) (Math.random() * 11);
-        int numAttempt = 10;
+        int number = 0;
 
-        for (int numAttend = 0; numAttend < 10; numAttend++) {
+        for (int numAttempt = 0; numAttempt < 4; numAttempt++) {
             System.out.println("Введите число от 1 до 10");
-            int userNum = scanner.nextInt();
-            if (userNum != number) {
-                System.out.println("Вы не угадали число. Коспьютер загадал " + number);
+            number = (int) (Math.random() * 11);
+            if (scanner.hasNextInt()) {
+                int userNum = scanner.nextInt();
+                if (userNum != number) {
+                    System.out.println("Вы не угадали число. Коспьютер загадал " + number);
+                }
+                else {
+                    System.out.println("Правильно. Вы выиграли!");
+                    break;
+                }
+            } else {
+                System.out.println("Неверный формат. Введите число от 1 до 10");
+                scanner.nextLine();
             }
-            else {
-                System.out.println("Правильно. Вы выиграли!");
-                break;
-            }
+
 
         }
     }
